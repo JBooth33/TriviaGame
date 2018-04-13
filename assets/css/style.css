@@ -1,0 +1,42 @@
+body {
+    background-color: aquamarine;
+}
+
+.container {
+    width: 700px;
+    height: 500px;
+    margin: 0 auto;
+    background-color: white;
+    color: gray;
+    border: 3px solid back;
+    padding: 50px;
+    margin-top: 50px;
+}
+
+.title {
+    font-size: 48px;
+    text-align: center;
+}
+
+#start {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.question {
+    font-size: 24px;
+}
+
+.buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#button1, #button2, #button3, #button4 {
+    background-color: gray;
+    font-size: 20px;
+    width: 205px;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
