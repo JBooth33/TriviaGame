@@ -138,7 +138,8 @@ var timer = {
             timer.clock--;
             $("#timer").text(timer.clock);
         }
-    }
+});
+
 
 
 
