@@ -23,7 +23,19 @@ $(document).ready(function() {
         console.log("graded it!");
     });
 
-   
+    //resets all variables
+    function reset() {
+        gameActive = false,
+            correctAnswer = false,
+            gameOver = false,
+            questionList.num = 8,
+            rightAnswer = 0,
+            wrongAnswer = 0,
+            gameQuestion = [];
+        timer.reset();
+        getQuestions();
+        questionList.gameOn();
+    }
     //array of all the questions and answers
     var myQuestions = [
     {
@@ -77,24 +89,13 @@ $(document).ready(function() {
     ];
     })
 
-    var counter = myQuestions.length;
-
-    function addQuestion(myQuestions) {
-        for (var i = 0; i < myQuestions.length; i++) {
-            $("#start").hide();
-            
-        }
-    }
-
-
-
-
-
+   
 
 function getQuestions() {
     //make questions into new array
     gameQuestion = myQuestions.slice(0);
     for (var i = myQuestions.length - 1; i > 0; i--) {
+        
         var getIndex = Math.floor(Math.random() * (i + 1));
 
         gameQuestion[getIndex] = gameQuestion[i];
@@ -175,6 +176,15 @@ gameOver: function() {
     $("#button2").css("display", "none");
     $("#button3").css("display", "none");
     $("#button4").css("display", "none");
+
+    var unAnswered;
+    if ((rightAnswer + wrongAnswer) === 10) {
+        unAnswered = 0;
+    } else {
+        unAnswered = 10 - rightAnswer + wrongAnswer;
+    }
+    $("#unAnswered").text(unAnswered);
+    $("#score").text(rightAnswer + '/' + '8');
 }
 }
 

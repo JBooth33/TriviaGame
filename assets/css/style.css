@@ -3,8 +3,8 @@ body {
 }
 
 .container {
-    width: 700px;
-    height: 500px;
+    width: 60%;
+    height: 60%;
     margin: 0 auto;
     background-color: white;
     color: gray;
@@ -20,6 +20,10 @@ body {
 
 #start {
     margin-top: 30px;
+    text-align: center;
+}
+
+#timer {
     text-align: center;
 }
 
